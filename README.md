@@ -19,9 +19,7 @@ The **Task Manager Application** is a user-friendly web application designed to 
 
 **Technologies Used:**
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python, Flask framework
-- **Database:** MySQL (for data storage)
+-  HTML, CSS, JavaScript
 - **Version Control:** Git and GitHub for collaborative development
 
 
