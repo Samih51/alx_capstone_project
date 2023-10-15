@@ -8,8 +8,12 @@ body {
     background-color: #f9f9f9;
 }
 
-h2 {
+h2, h4 {
     text-align: center;
+}
+h4{
+
+    margin-bottom: 5px;
 }
 
 .container {
@@ -74,6 +78,9 @@ h2 {
 .form input[type="submit"]:hover {
     background-color: #45a049;
 }
+.filter{
+    margin-bottom: 20px;
+}
 
 .filter input[type="button"] {
     background-color: #4caf50;
@@ -87,4 +94,37 @@ h2 {
 
 .filter input[type="button"]:hover {
     background-color: #45a049;
+}
+.task{
+    border: 1px solid black;
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+/* .task-icon{
+    display: block;
+    margin: 0 auto;
+} */
+.btn-group{
+    display: flex;
+    gap: 5px
+}
+button{
+    flex-grow: 1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+.btn-edit{
+    background-color: #4caf50;
+}
+.btn-delete{
+    background-color: red;
+}
+.btn-comp{
+    background-color: blue;
 }
