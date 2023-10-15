@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <h2>Task Manager</h2>
+            <div class="search-area">
+                <img src="image/icons8-search.svg" alt="" class="search-icon">
+                <input type="text" class="search" placeholder="Search">
+            </div>
+        </div>
+        <img src="" alt="">
+        <div class="form">
+            <label>Task</label>
+            <input type="text" placeholder="What is your new task?" id="task_name"><br>
+            <label>Date</label>
+            <input type="date" name="" id="date"><br>
+            <label>Time</label>
+            <input type="time" name="" id="time"><br>
+            <label>Category</label>
+            <select name="" id="category">
+                <option value="work">Work</option>
+                <option value="hobby">Hobby</option>
+                <option value="family">Family</option>
+                <option value="personal">Personal</option>
+
+            </select><br>
+            <label>Priority</label>
+            <select name="" id="priority">
+                <option value="high_priority">High Priority</option>
+                <option value="normal_priority">Normal Priority</option>
+                <option value="low_priority">Low Priority</option>
+            </select><br>
+            <input type="submit" value="Add New Task" id="add-task">
+        </div>
+    </div>
+    <main>
+        <section class="task-list">
+            <h2>Tasks</h2>
+            <div class="filter">
+            <input type="button" value="High Priority">
+            <input type="button" value="Normal Priority">
+            <input type="button" value="Low Priority">
+            <input type="button" value="Clear">
+
+            </div>
+            <div class="task">
+
+            </div>
+
+
+        </section>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
