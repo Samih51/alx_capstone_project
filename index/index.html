@@ -19,24 +19,24 @@
         <img src="" alt="">
         <div class="form">
             <label>Task</label>
-            <input type="text" placeholder="What is your new task?" id="task_name"><br>
+            <input type="text" placeholder="What is your new task?" id="task_name" name="taskName"><br>
             <label>Date</label>
-            <input type="date" name="" id="date"><br>
+            <input type="date"  id="date" name="date"><br>
             <label>Time</label>
-            <input type="time" name="" id="time"><br>
+            <input type="time" id="time" name="time"><br>
             <label>Category</label>
-            <select name="" id="category">
-                <option value="work">Work</option>
-                <option value="hobby">Hobby</option>
-                <option value="family">Family</option>
-                <option value="personal">Personal</option>
+            <select  id="category">
+                <option value="Work">Work</option>
+                <option value="Hobby">Hobby</option>
+                <option value="Family">Family</option>
+                <option value="Personal">Personal</option>
 
             </select><br>
             <label>Priority</label>
-            <select name="" id="priority">
-                <option value="high_priority">High Priority</option>
-                <option value="normal_priority">Normal Priority</option>
-                <option value="low_priority">Low Priority</option>
+            <select id="priority">
+                <option value="High Priority">High Priority</option>
+                <option value="Normal Priority">Normal Priority</option>
+                <option value="Low Priority">Low Priority</option>
             </select><br>
             <input type="submit" value="Add New Task" id="add-task">
         </div>
@@ -51,26 +51,33 @@
             <input type="button" value="Clear">
 
             </div>
-            <div class="task">
-                <img src="image/icons8-task-96.png" alt="task-icon" class="task-icon">
-                <div class="task-body">
-                    <h4>Task Name</h4>
-                    <p>Date :  Time</p>
-                    <p>Priority</p>
-                    <p>Task Status: Done</p>
-                </div>
-                <div class="btn-group">
-                    <button class= "btn-edit">Edit</button>
-                    <button class= "btn-delete">Delete</button>
-                    <button class= "btn-comp">Completed</button>
+            <div class="task-group">
+                <!-- <div class="tasks">
+                    <div class="img-group">
+                        <img src="image/icons8-task-96.png" alt="task-icon" class="task-icon">
+                    </div>
+                    <div class="task-body">
+                        <h4>Task Name</h4>
+                        <div class="para">
+                            <p>Date :  Time</p>
+                            <p>Priority</p>
+                            <p>Category</p>
+                            <p>Task Status: Done</p>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class= "btn-edit">Edit</button>
+                        <button class= "btn-delete">Delete</button>
+                        <button class= "btn-comp">Completed</button>
+
+                    </div> -->
 
                 </div>
-
             </div>
 
 
         </section>
     </main>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
