@@ -9,7 +9,9 @@ The **Task Manager Application** is a user-friendly web application designed to 
 1. **Task Creation:** Users can create new tasks by providing a title, description, due date, and category.
 2. **Task Editing:** Tasks can be edited or updated, allowing users to modify task details or due dates.
 3. **Mark as Completed:** Users can mark tasks as completed, providing a visual indicator of finished tasks.
-4. **Task Filtering:** Tasks can be filtered based on categories or dates, enabling users to focus on specific tasks.
+4. **Task Filtering:** Tasks can be filtered based on task priority tasks.
+5. **Task Notification:** Users will be notified when the task has less than or equal to 2hrs remaining for the task due date.
+
 
 
 *Unique Selling Points (USPs):*
