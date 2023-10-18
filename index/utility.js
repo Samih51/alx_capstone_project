@@ -44,6 +44,7 @@ function validateForm(){
  
  }
 
+//this sets the input fields with the task thats going to be edited
  function setTaskField(task) {
     taskName.value = task.taskNameValue;
     date.value = task.dateValue;
@@ -65,7 +66,7 @@ function validateForm(){
 
     addBtn.value = "Edit Task";
  }
- 
+
 
  export{
     validateForm, getValues, clear, setTaskField};

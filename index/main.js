@@ -54,6 +54,7 @@ highPriorityBtn.addEventListener('click', function(){
 
   }
 });
+
 normalPriorityBtn.addEventListener('click', function(){
     const taskList = document.querySelector(".task-group");
     const tasks = taskList.getElementsByClassName("tasks");
@@ -72,6 +73,7 @@ normalPriorityBtn.addEventListener('click', function(){
 
   }
 });
+
 lowPriorityBtn.addEventListener('click', function(){
     const taskList = document.querySelector(".task-group");
     const tasks = taskList.getElementsByClassName("tasks");
@@ -100,8 +102,9 @@ clearBtn.addEventListener('click', function(){
   }
 });
 
+//this creates the tasks when the button is pressed
 function createTask(task, position) {
-    // console.log(task);
+
      const tasksDiv = document.createElement("div");
      tasksDiv.setAttribute("class", "tasks");
  
@@ -197,6 +200,7 @@ function createTask(task, position) {
      return tasksDiv;    
  }
  
+ //this renders the tasks 
  function renderTask(tasks) {
      const render = document.querySelector('.task-group');
      render.innerHTML = "";
@@ -208,7 +212,7 @@ function createTask(task, position) {
      
  }
  
- 
+ //this function searches the task name
 function search() {
 
   const searchTerm = document.querySelector(".search").value.toUpperCase();
@@ -232,6 +236,7 @@ function search() {
 }
 window.search = search;
 
+//this function checks if the task has less than 2 hours till its due date and alerts you. it checks every 2 mins 
 function checkTime(){
     for(let i = 0; i < tasks.length; i++){
         const task = tasks[i]
@@ -242,7 +247,7 @@ function checkTime(){
         const timeLeft = deadline.getTime() - now.getTime();
 
         // Check if 2 hours or less left
-        if(timeLeft <= 2 * 60 * 60 * 1000) {
+        if(timeLeft <= 2 * 60 * 60 * 1000 && timeLeft > 0) {
             alert(`Your task ${task.taskNameValue} is due in 2 hours!`);
          }
   
