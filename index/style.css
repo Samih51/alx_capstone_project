@@ -158,6 +158,10 @@ button{
 }
 @media (max-width: 767px) {
     
+    p{
+        text-align: center;
+    }
+    
     .header {
       flex-direction: column;
       padding-left: 0;
@@ -176,9 +180,6 @@ button{
     }
     .img-group{
         margin: 0 38%;
-    }
-    p{
-        text-align: center;
     }
     .filter{
         margin-left: 10%;
