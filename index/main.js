@@ -231,3 +231,22 @@ function search() {
 
 }
 window.search = search;
+
+function checkTime(){
+    for(let i = 0; i < tasks.length; i++){
+        const task = tasks[i]
+
+        const deadline = new Date(task.dateValue + ' ' + task.timeValue);
+
+        const now = new Date();
+        const timeLeft = deadline.getTime() - now.getTime();
+
+        // Check if 2 hours or less left
+        if(timeLeft <= 2 * 60 * 60 * 1000) {
+            alert(`Your task ${task.taskNameValue} is due in 2 hours!`);
+         }
+  
+        }
+}
+
+setInterval(checkTime, 2 * 60 * 1000);
