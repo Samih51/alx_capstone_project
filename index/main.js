@@ -248,7 +248,7 @@ function checkTime(){
 
         // Check if 2 hours or less left
         if(timeLeft <= 2 * 60 * 60 * 1000 && timeLeft > 0) {
-            alert(`Your task ${task.taskNameValue} is due in 2 hours!`);
+            alert(`Your task ${task.taskNameValue} is due in 2 hours or less!`);
          }
   
         }
