@@ -93,6 +93,8 @@ function createTask(task, position) {
      deleteBtn.addEventListener('click', function(){
         
         tasks.splice(position, 1);
+        const stringify = JSON.stringify(tasks);
+        localStorage.setItem('tasks', stringify);
         renderTask(tasks)
      })
  
@@ -136,6 +138,26 @@ function createTask(task, position) {
      
  }
  
+ 
+function search() {
 
+  const searchTerm = document.querySelector(".search").value.toUpperCase();
+  
+  const taskList = document.querySelector(".task-group");
+  const tasks = taskList.getElementsByClassName("tasks");
 
+  for (let i = 0; i < tasks.length; i++) {
 
+    const title = tasks[i].querySelector("h4"); 
+    const titleText = title.textContent || title.innerText;
+    
+    if (titleText.toUpperCase().indexOf(searchTerm) > -1) {
+      tasks[i].style.display = "";
+    } else {
+      tasks[i].style.display = "none";
+    }
+
+  }
+
+}
+window.search = search;

@@ -4,6 +4,7 @@ const time = document.getElementById("time");
 const category = document.getElementById("category") ;
 const priority = document.getElementById("priority");
 const addBtn = document.querySelector("#add-task")
+const search = document.querySelector(".search");
 
 //this finction validates the inputs of the form
 function validateForm(){
@@ -23,9 +24,10 @@ function validateForm(){
  
  //this function clears the input fields of the form 
  function clear(){
-     taskName.value='';
-     date.value='';
-     time.value='';
+     taskName.value = '';
+     date.value = '';
+     time.value = '';
+     search.value = '';
  
  }
  

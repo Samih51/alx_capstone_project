@@ -13,10 +13,9 @@
             <h2>Task Manager</h2>
             <div class="search-area">
                 <img src="image/icons8-search.svg" alt="" class="search-icon">
-                <input type="text" class="search" placeholder="Search">
+                <input type="text" class="search" placeholder="Search" onkeyup="search()">
             </div>
         </div>
-        <img src="" alt="">
         <div class="form">
             <label>Task</label>
             <input type="text" placeholder="What is your new task?" id="task_name" name="taskName"><br>
@@ -45,7 +44,7 @@
         <section class="task-list">
             <h2>Tasks</h2>
             <div class="filter">
-            <input type="button" value="High Priority">
+            <input type="button" value="High Priority" >
             <input type="button" value="Normal Priority">
             <input type="button" value="Low Priority">
             <input type="button" value="Clear">
