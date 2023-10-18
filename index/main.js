@@ -3,6 +3,11 @@ import { validateForm, getValues, clear, setTaskField} from './utility.js'
 const addBtn = document.getElementById("add-task");
 const tasks = JSON.parse(localStorage.getItem('tasks'));
 let currentPosition = -1;
+const highPriorityBtn = document.getElementById("high-priority");
+const normalPriorityBtn = document.getElementById("normal-priority");
+const lowPriorityBtn = document.getElementById("low-priority");
+const clearBtn = document.getElementById("clear");
+
 
 renderTask(tasks);
 
@@ -28,9 +33,72 @@ addBtn.addEventListener('click', function(){
 
     renderTask(tasks);
     
-})
+});
 
+highPriorityBtn.addEventListener('click', function(){
+    
+    const taskList = document.querySelector(".task-group");
+    const tasks = taskList.getElementsByClassName("tasks");
 
+  for (let i = 0; i < tasks.length; i++) {
+
+    
+    const priorityElement = tasks[i].querySelector(".priority"); 
+    const priority = priorityElement.textContent || priorityElement.innerText;
+    
+    if (priority === "High Priority") {
+      tasks[i].style.display = "";
+    } else {
+      tasks[i].style.display = "none";
+    }
+
+  }
+});
+normalPriorityBtn.addEventListener('click', function(){
+    const taskList = document.querySelector(".task-group");
+    const tasks = taskList.getElementsByClassName("tasks");
+
+  for (let i = 0; i < tasks.length; i++) {
+
+    
+    const priorityElement = tasks[i].querySelector(".priority"); 
+    const priority = priorityElement.textContent || priorityElement.innerText;
+    
+    if (priority === "Normal Priority") {
+      tasks[i].style.display = "";
+    } else {
+      tasks[i].style.display = "none";
+    }
+
+  }
+});
+lowPriorityBtn.addEventListener('click', function(){
+    const taskList = document.querySelector(".task-group");
+    const tasks = taskList.getElementsByClassName("tasks");
+
+  for (let i = 0; i < tasks.length; i++) {
+
+    
+    const priorityElement = tasks[i].querySelector(".priority"); 
+    const priority = priorityElement.textContent || priorityElement.innerText;
+    
+    if (priority === "Low Priority") {
+      tasks[i].style.display = "";
+    } else {
+      tasks[i].style.display = "none";
+    }
+
+  }
+});
+
+clearBtn.addEventListener('click', function(){
+    const taskList = document.querySelector(".task-group");
+    const tasks = taskList.getElementsByClassName("tasks");
+
+  for (let i = 0; i < tasks.length; i++){
+    tasks[i].style.display = "";
+  }
+});
 
 function createTask(task, position) {
     // console.log(task);
@@ -61,6 +129,8 @@ function createTask(task, position) {
  
      const priorityPara = document.createElement("p");
      priorityPara.textContent = task.priorityValue;
+     priorityPara.setAttribute("class", "priority");
+
      
      const categoryPara = document.createElement("p");
      categoryPara.textContent = task.categoryValue; 
